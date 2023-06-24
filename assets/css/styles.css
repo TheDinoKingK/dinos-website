@@ -1,0 +1,445 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+  font-family: "Helsinki";
+  src: url("/helsinki.woff") format("woff");
+}
+@font-face {
+  font-family: 'Mikado';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoRegular.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Regular Italic';
+  font-style: italic;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoRegularItalic.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoLight.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Light Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoLightItalic.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoMedium.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoMediumItalic.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoBold.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoBoldItalic.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Black';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoBlack.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Black Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoBlackItalic.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Ultra';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoUltra.woff') format('woff');
+  }
+  @font-face {
+  font-family: 'Mikado Ultra Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/mikado/HVD Fonts  MikadoUltraItalic.woff') format('woff');
+  }
+
+.b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
+  
+  body {
+    background-image: url('/images/homebgplaceholder.jpg');
+    background-position: center;
+    background-size: cover;
+    text-shadow: 0 .1rem .1rem rgba(0, 0, 0, .5);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  }
+  
+  .cover {
+    overflow: hidden;
+  }
+
+  .display-1 {
+    font-weight: 500;
+    text-shadow: 0 .6rem 1.3rem rgba(0, 0, 0, .9);
+  }
+
+  .display-6 {
+    font-family: 'Mikado Bold';
+    font-weight: normal;
+    text-shadow: 0 .5rem .7rem rgba(0, 0, 0, 1);
+  }
+
+  .buttonz {
+    font-family: 'Mikado Bold';
+    font-weight: normal;
+    padding: 0.2%;
+  }
+
+  .v-center {
+    min-height: 90%;
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .home-buttonz {
+    transform: scale(0.8) translateY(20px);
+    opacity: 0;
+  }
+
+  .hb1 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 3.1rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+  
+  .hb1:hover {
+    max-width: 9.9rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hbt1 {
+    z-index: -2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 0;
+    transform: translateX(-5rem);
+    opacity: 0;
+    padding-left: 0rem;
+    max-height: 1em;
+    white-space: nowrap;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb1:hover .hbt1 {
+    max-width: 100px;
+    transform: translateX(0rem);
+    padding-left: 0.5rem;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 3.1rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb2:hover {
+    max-width: 10rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hbt2 {
+    z-index: -2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 0;
+    transform: translateX(-5rem);
+    opacity: 0;
+    padding-left: 0rem;
+    max-height: 1em;
+    white-space: nowrap;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb2:hover .hbt2 {
+    max-width: 100px;
+    transform: translateX(0rem);
+    padding-left: 0.5rem;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 3.1rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb3:hover {
+    max-width: 12rem;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hbt3 {
+    z-index: -2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 0;
+    transform: translateX(-7rem);
+    opacity: 0;
+    padding-left: 0rem;
+    max-height: 1em;
+    white-space: nowrap;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb3:hover .hbt3 {
+    max-width: 140px;
+    transform: translateX(0rem);
+    padding-left: 0.5rem;
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .home-buttonz:hover {
+    filter: saturate(105%) contrast(110%);
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  /* .btn:hover {
+    transform: scale(110%);
+    transition: all 0.2s cubic-bezier(0.18,0.88,0.51,0.99);
+  }
+  
+  .btn:active {
+    transform: scale(90%);
+    filter: brightness(135%);
+    transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
+  } */
+
+  .navbrand {
+    filter: drop-shadow(0 .16rem .1rem rgba(0, 0, 0, .7));
+  }
+
+  .navbrand:hover {
+    transform: scale(110%);
+    filter: brightness(110%) drop-shadow(0 .16rem .1rem rgba(0, 0, 0, .7));
+    transition: all 0.2s cubic-bezier(0.15,0.63,0.6,0.94);
+  }
+  
+  .navbrand:active {
+    transform: scale(90%);
+    filter: brightness(90%) drop-shadow(0 .16rem .1rem rgba(0, 0, 0, .7));
+    transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
+  }
+
+  .home.header {
+    display: inline-block;
+    filter: blur(13px);
+  }
+
+  .home.header .letter {
+    display: inline-block;
+  }
+
+  .home.subheader {
+    display: inline-block;
+    /* transform: translateY(-30px); */
+    transform: scale(0.95) skewX(10deg) translateY(-20px);
+    opacity: 0;
+  }
+
+  .container-sm {
+    max-height: 100%;
+  }
+
+  .nav-link {
+    font-family: 'Mikado Bold';
+    font-weight: normal;
+    text-shadow: 0 .16rem .1rem rgba(0, 0, 0, .7);
+  }
+
+  .navbar-anim {
+    transform: translateY(-150%);
+  }
+
+  .navbar-icon {
+    text-decoration: none;
+    color: white;
+  }
+
+  .navbar-icon:hover {
+    text-decoration: none;
+    color: rgb(233, 177, 200);
+  }
+
+  .link-about:hover {
+    color: crimson;
+    transform: scale(105%);
+    transition: all 0.3s cubic-bezier(0.16,0.63,0.27,0.9);
+  }
+
+  .link-about:active {
+    transform: scale(95%);
+    filter: brightness(135%);
+    transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
+  }
+
+  .link-social:hover {
+    color: #198754;
+    transform: scale(105%);
+    transition: all 0.3s cubic-bezier(0.16,0.63,0.27,0.9);
+  }
+
+  .link-social:active {
+    transform: scale(95%);
+    filter: brightness(135%);
+    transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
+  }
+
+  .link-equip:hover {
+    color: rgb(130, 143, 156) ;
+    transform: scale(105%);
+    transition: all 0.3s cubic-bezier(0.16,0.63,0.27,0.9);
+  }
+
+  .link-equip:active {
+    transform: scale(95%);
+    filter: brightness(135%);
+    transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
+  }
+
+/* Animations */
+  .header:nth-child(1) {
+    animation: fade-in 0.9s 0.0s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  }
+  
+  /* .header:nth-child(2) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  }
+  
+  .header:nth-child(3) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  }
+  
+  .header:nth-child(4) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  }
+  
+  .header:nth-child(5) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  }
+  
+  .header:nth-child(6) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.65,0.06,0.37,0.93);
+  } */
+  
+  /* second anim for text */
+
+  .subheader:nth-child(1) {
+    animation: move-in 0.6s 1.2s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+  
+  .subheader:nth-child(2) {
+    animation: move-in 0.6s 1.3s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+  
+  .subheader:nth-child(3) {
+    animation: move-in 0.6s 1.4s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+  
+  .subheader:nth-child(4) {
+    animation: move-in 0.6s 1.5s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+
+  /* third anim for buttons */
+
+  .home-buttonz.hb1 {
+    animation: fade-in-2 1.0s 1.9s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+
+  .home-buttonz.hb2 {
+    animation: fade-in-2 1.0s 1.7s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+  
+  .home-buttonz.hb3 {
+    animation: fade-in-2 1.0s 1.9s forwards cubic-bezier(0.31,0,0,0.91);
+  }
+
+  /* fourth anim for navbar */
+
+  .navbar-anim {
+    animation: move-down 1.5s 0.8s forwards cubic-bezier(0.44,0.09,0.43,0.89);
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes move-in {
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(-30px) skewX(0deg);
+    }
+  }
+
+  @keyframes fade-in-2 {
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0px);
+    }
+  }
+
+  @keyframes move-in-2 {
+    100% {
+      transform: scale(1) translateY(0px);
+    }
+  }
+
+
+  @keyframes move-down {
+    100% {
+      transform: translateY(0%);
+    }
+  }

@@ -1,0 +1,47 @@
+
+// import fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+  font-family: "Helsinki";
+  src: url("/helsinki.woff") format("woff");
+}
+
+$display-font-sizes: (
+  1: 15rem,
+  2: 4.5rem,
+  3: 4rem,
+  4: 3.5rem,
+  5: 3rem,
+  6: 3rem
+);
+
+$display-font-family: Helsinki; 
+$display-font-style:  null;
+$display-font-weight: 200;
+
+$box-shadow: 0 0.6rem 0.7rem rgba(#0000, 0.5);
+
+
+$theme-colors: (
+  "primary":    #0D6EFD,
+  "secondary":  #6C757D,
+  "success":    #198754,
+  "info":       #0DCAF0,
+  "warning":    #FFC107,
+  "danger":     #DC3545,
+  "light":      #F8F9FA,
+  "dark":       #212529,
+  "crimson": #c40021
+);
+
+// some custom colors
+// crimson dark #ac001e
+// crimson bright #c40021
+
+// $body-color-dark: #0d001e;
+// $body-bg-dark: #0d001e;
+
+// import bootstrap and its functions
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
