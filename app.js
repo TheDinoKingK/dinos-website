@@ -53,6 +53,9 @@ app.get("/equipment", (req, res) => {
   res.sendFile(path.join(__dirname, "views/equipment.html"))
 })
 
+app.get("/dial", (req, res) => {
+  res.sendFile(path.join(__dirname, "views/call.html"))
+})
 
 app.listen(3000, () => {
     console.log(`Server is listening on port 3000`)
