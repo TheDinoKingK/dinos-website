@@ -30,7 +30,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: v16.x
+          node-version: vv18.12.1
 
       - name: Build Node assets
         env:
@@ -39,7 +39,7 @@ jobs:
         run: |
           npm ci
           npm i animejs bootstrap-icons bootstrap express-handlebars express jquery nodemon serve-favicon
-          nodemon app.js
+          npm run start
 
 # Please do not touch the following action
       - name: Store deployment content
@@ -47,7 +47,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-us.ionos.space
-          project-id: 5e4e8a3c-017d-4296-a52d-4b5be8037588
+          project-id: e88a4834-d7f9-4498-864d-685ebc267a4c
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
