@@ -41,20 +41,20 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "views/index.html"))
 })
 
-app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/about.html"))
-})
+// app.get("/about", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views/about.html"))
+// })
 
-app.get("/social_media", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/socials.html"))
-})
+// app.get("/social_media", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views/socials.html"))
+// })
 
-app.get("/equipment", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/equipment.html"))
-})
+// app.get("/equipment", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views/equipment.html"))
+// })
 
-app.get("/dial", (req, res) => {
-  res.sendFile(path.join(__dirname, "views/call.html"))
-})
+// app.get("/dial", (req, res) => {
+//   res.sendFile(path.join(__dirname, "views/call.html"))
+// })
 
 app.listen(process.env.PORT)
