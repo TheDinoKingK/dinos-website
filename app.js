@@ -1,17 +1,26 @@
 const express = require("express")
 const path = require("path")
-
-
-
+const hbs = require('express-handlebars')
 const app = express()
 
-var favicon = require('serve-favicon')
+const onAbout = false;
+const onSocial = false;
+const onEquip = false;
 
-app.use(favicon(__dirname + '/favicon.ico'));
+app.engine('handlebars', hbs.engine({ defaultLayout: "main" }))
+app.set('view engine', 'handlebars')
+
+const favicon = require('serve-favicon');
+const { title } = require("process");
+
+// static imports
+
+app.use(favicon(__dirname + '/favicon.ico'))
 app.use('/images', express.static('assets/imgs'))
-app.use('/homepage.js', express.static('assets/js/homepage.js'))
 app.use('/helsinki.woff', express.static('assets/fonts/helsinki_regular_macroman/helsinki-webfont.woff'))
 app.use('/mikado', express.static('assets/fonts/mikado'))
+
+// static shortcuts
 
 app.use(
   "/css",
@@ -33,28 +42,39 @@ app.use(
   "/js",
   express.static(path.join(__dirname, "node_modules/animejs/lib"))
 )
-app.use("/js", express.static(path.join(__dirname, "node_modules/jquery/dist")))
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "node_modules/jquery/dist"))
+)
+app.use(
+  "/js",
+  express.static(path.join(__dirname, "assets/js"))
+)
   
+// routes
 
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/index.html"))
+app.get('/', (req, res) => {
+  res.render('main/index', {title: 'The dino king'})
 })
 
-// app.get("/about", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/about.html"))
-// })
+app.get('/about', (req, res) => {
+  res.render('main/about', {title: 'About me', onAbout: true})
+})
 
-// app.get("/social_media", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/socials.html"))
-// })
+app.get('/social_media', (req, res) => {
+  res.render('main/socials', {title: 'Social hub', onSocial: true})
+})
 
-// app.get("/equipment", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/equipment.html"))
-// })
+app.get('/equipment', (req, res) => {
+  res.render('main/equipment', {title: 'My equipment', onEquip: true})
+})
 
-// app.get("/dial", (req, res) => {
-//   res.sendFile(path.join(__dirname, "views/call.html"))
-// })
+// silly easter egg routes
 
-app.listen(process.env.PORT)
+app.get('/dial', (req, res) => {
+  res.render('main/dial', {title: 'Dial Up'})
+})
+
+// app.listen(process.env.PORT)
+
+app.listen(3000)
