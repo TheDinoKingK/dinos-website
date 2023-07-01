@@ -1,0 +1,56 @@
+<div class="container-fluid d-flex w-100 h-100 mx-auto flex-column cover" data-bs-theme="dark">
+
+    <!-- Navbar -->
+    {{> navbar }}
+
+    <div class="flex-column d-flex text-center">
+        <h1 class="display-6">This is the social media page</h1>
+    </div>
+
+    <!-- Discord Avatar Img -->
+    {{!-- <img class="navbrand" src="https://cdn.discordapp.com/avatars/549359497974644756/d96592120c370dcc5949101eb5d771fe.png?size=4096" width="100" height="100"/> --}}
+    
+
+    {{!-- social icons reference --}}
+    <div class="flex-column d-flex text-center p-auto">
+        <p class="lead user-select-none">
+            <a class="btn btn-lg social-buttonz btn-info shadow" data-bs-toggle="modal" data-bs-target="#kofiModal">
+                {{!-- href="/donate" --}}
+                <i class="cib-ko-fi social" style="font-size: 2rem;"></i>
+            </a>
+            <a class="btn btn-lg social-buttonz btn-crimson shadow" href="https://youtube.com/@TheDinoKingOfficial" target="_blank">
+                <i class="bi-youtube social" style="font-size: 2rem;"></i>
+            </a>
+            <a class="btn btn-lg social-buttonz btn-primary shadow" href="https://twitter.com/TheDinoKingK" target="_blank">
+                <i class="bi-twitter social" style="font-size: 2rem;"></i>
+            </a>
+            <a class="btn btn-lg social-buttonz btn-dark shadow" href="https://github.com/TheDinoKingK" target="_blank">
+                <i class="bi-github social" style="font-size: 2rem;"></i>
+            </a>
+            <a class="btn btn-lg social-buttonz btn-secondary shadow" id="toastTrigger" onclick="clipboardText('thedinoking', 'discord handle')">
+                <i class="bi-discord social" style="font-size: 2rem;"></i> 
+            </a>
+            <a class="btn btn-lg social-buttonz btn-warning shadow" id="toastTrigger" onclick="clipboardText('thedinokingk@gmail.com', 'email address')">
+                <i class="bi-envelope-fill social" style="font-size: 2rem;"></i>
+            </a>
+        </p>
+    </div>
+
+    {{!-- Kofi Modal --}}
+    {{> kofi }}
+
+    {{!-- clipboard text toast --}}
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast align-items-center" id="alertToast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <p id="toast-text" class="p-0 m-0"></p>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/socials.js"></script>
+
+</div>

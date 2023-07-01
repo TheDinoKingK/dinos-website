@@ -77,17 +77,6 @@
   src: url('/mikado/HVD Fonts  MikadoUltraItalic.woff') format('woff');
   }
 
-.b-example-vr {
-    flex-shrink: 0;
-    width: 1.5rem;
-    height: 100vh;
-  }
-
-  .bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-  }
-  
   body {
     background-image: url('/images/homebgplaceholder.jpg');
     background-position: center;
@@ -98,6 +87,11 @@
   
   .cover {
     overflow: hidden;
+  }
+
+  .kofi-modal {
+    border-radius: 0.7rem;
+    /* filter: drop-shadow(0 .6rem .7rem rgba(0, 0, 0, 0.75)); */
   }
 
   .display-1 {
@@ -118,17 +112,39 @@
   }
 
   .v-center {
-    min-height: 90%;
-    min-height: 90vh;
+    min-height: 95%;
+    min-height: 95vh;
 
     display: flex;
     align-items: center;
   }
 
-  .home-buttonz {
-    transform: scale(0.8) translateY(20px);
-    opacity: 0;
+  .social-buttonz {
+    max-width: 5rem;
+    max-height: 5rem;
+    text-shadow: 0 .15rem .1rem rgba(0, 0, 0, .75);
   }
+
+  .social {
+    color: white;
+  }
+
+  .home-buttonz {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  /* .home-buttonz:hover {
+    filter: saturate(105%) contrast(110%);
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb1:active {
+    transform: scale(70%);
+    filter: saturate(135%) brightness(75%);
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  } */
 
   .hb1 {
     display: inline-flex;
@@ -163,6 +179,11 @@
     transform: translateX(0rem);
     padding-left: 0.5rem;
     opacity: 1;
+    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
+  }
+
+  .hb1:active .hbt1 {
+    /* transform: rotate3d(20deg, 43deg, 27deg); */
     transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
   }
 
@@ -238,21 +259,16 @@
     transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
   }
 
-  .home-buttonz:hover {
-    filter: saturate(105%) contrast(110%);
-    transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
-  }
-
-  /* .btn:hover {
+  .btn:hover {
     transform: scale(110%);
     transition: all 0.2s cubic-bezier(0.18,0.88,0.51,0.99);
   }
   
   .btn:active {
     transform: scale(90%);
-    filter: brightness(135%);
+    filter: brightness(90%);
     transition: all 0.3 cubic-bezier(0.18,0.89,0.32,1.27);
-  } */
+  }
 
   .navbrand {
     filter: drop-shadow(0 .16rem .1rem rgba(0, 0, 0, .7));
@@ -294,6 +310,10 @@
     font-family: 'Mikado Bold';
     font-weight: normal;
     text-shadow: 0 .16rem .1rem rgba(0, 0, 0, .7);
+  }
+
+  .nav-link-disabled {
+    color: #8A9198;
   }
 
   .navbar-anim {
@@ -427,7 +447,7 @@
   @keyframes fade-in-2 {
     100% {
       opacity: 1;
-      transform: scale(1) translateY(0px);
+      transform: translateY(0px);
     }
   }
 

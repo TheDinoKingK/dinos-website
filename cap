@@ -1,0 +1,84 @@
+[33mcommit 1ffe753f81df87497d23b793020b2fd059d1e524[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;32mmaster[m[33m)[m
+Author: kaveend <jayjayasinghe9@gmail.com>
+Date:   Mon Jun 26 21:29:59 2023 -0400
+
+    site blocker
+
+[1mdiff --git a/app.js b/app.js[m
+[1mindex 30d04f5..2dec397 100644[m
+[1m--- a/app.js[m
+[1m+++ b/app.js[m
+[36m@@ -41,20 +41,20 @@[m [mapp.get("/", (req, res) => {[m
+     res.sendFile(path.join(__dirname, "views/index.html"))[m
+ })[m
+ [m
+[31m-app.get("/about", (req, res) => {[m
+[31m-  res.sendFile(path.join(__dirname, "views/about.html"))[m
+[31m-})[m
+[32m+[m[32m// app.get("/about", (req, res) => {[m
+[32m+[m[32m//   res.sendFile(path.join(__dirname, "views/about.html"))[m
+[32m+[m[32m// })[m
+ [m
+[31m-app.get("/social_media", (req, res) => {[m
+[31m-  res.sendFile(path.join(__dirname, "views/socials.html"))[m
+[31m-})[m
+[32m+[m[32m// app.get("/social_media", (req, res) => {[m
+[32m+[m[32m//   res.sendFile(path.join(__dirname, "views/socials.html"))[m
+[32m+[m[32m// })[m
+ [m
+[31m-app.get("/equipment", (req, res) => {[m
+[31m-  res.sendFile(path.join(__dirname, "views/equipment.html"))[m
+[31m-})[m
+[32m+[m[32m// app.get("/equipment", (req, res) => {[m
+[32m+[m[32m//   res.sendFile(path.join(__dirname, "views/equipment.html"))[m
+[32m+[m[32m// })[m
+ [m
+[31m-app.get("/dial", (req, res) => {[m
+[31m-  res.sendFile(path.join(__dirname, "views/call.html"))[m
+[31m-})[m
+[32m+[m[32m// app.get("/dial", (req, res) => {[m
+[32m+[m[32m//   res.sendFile(path.join(__dirname, "views/call.html"))[m
+[32m+[m[32m// })[m
+ [m
+ app.listen(process.env.PORT)[m
+\ No newline at end of file[m
+[1mdiff --git a/views/index.html b/views/index.html[m
+[1mindex 3f9bda0..20a4d9f 100644[m
+[1m--- a/views/index.html[m
+[1m+++ b/views/index.html[m
+[36m@@ -50,23 +50,20 @@[m
+           <!-- Header -->[m
+ [m
+           <div>[m
+[31m-            <h1 class="home header display-1 user-select-none">'ello!</h1>[m
+[32m+[m[32m            <h1 class="home header display-1 user-select-none">sorry</h1>[m
+           </div>[m
+ [m
+           <!-- Sub Header -->[m
+     [m
+           <div> [m
+             <p class="display-6 text-center user-select-none">[m
+[31m-              <span class="home subheader">Hru</span>[m
+[31m-              <span class="home subheader">Genie</span>[m
+[31m-              <span class="home subheader">Yeeto</span>[m
+[31m-              <span class="home subheader">And whoever else</span>[m
+[32m+[m[32m              <span class="home subheader">this site is not finished yet, come back later</span>[m
+             </p>[m
+           </div>[m
+         [m
+           <!-- Button Redirects -->[m
+ [m
+[31m-          <div class="p-auto">[m
+[32m+[m[32m          <!-- <div class="p-auto">[m
+             <p class="lead">[m
+               <span class="buttonz flex-column user-select-none px-1">[m
+                 <a href="about" class="btn btn-lg btn-crimson shadow home-buttonz hb1">[m
+[36m@@ -87,7 +84,7 @@[m
+                 </a>[m
+               </span>[m
+             </p>[m
+[31m-          </div>[m
+[32m+[m[32m          </div> -->[m
+         </div> [m
+       </div>[m
+     </div>[m
