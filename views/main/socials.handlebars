@@ -3,37 +3,101 @@
     <!-- Navbar -->
     {{> navbar }}
 
-    <div class="flex-column d-flex text-center">
-        <h1 class="display-6">This is the social media page</h1>
-    </div>
-
     <!-- Discord Avatar Img -->
     {{!-- <img class="navbrand" src="https://cdn.discordapp.com/avatars/549359497974644756/d96592120c370dcc5949101eb5d771fe.png?size=4096" width="100" height="100"/> --}}
     
 
     {{!-- social icons reference --}}
-    <div class="flex-column d-flex text-center p-auto">
-        <p class="lead user-select-none">
-            <a class="btn btn-lg social-buttonz btn-info shadow" data-bs-toggle="modal" data-bs-target="#kofiModal">
-                {{!-- href="/donate" --}}
-                <i class="cib-ko-fi social" style="font-size: 2rem;"></i>
-            </a>
-            <a class="btn btn-lg social-buttonz btn-crimson shadow" href="https://youtube.com/@TheDinoKingOfficial" target="_blank">
-                <i class="bi-youtube social" style="font-size: 2rem;"></i>
-            </a>
-            <a class="btn btn-lg social-buttonz btn-primary shadow" href="https://twitter.com/TheDinoKingK" target="_blank">
-                <i class="bi-twitter social" style="font-size: 2rem;"></i>
-            </a>
-            <a class="btn btn-lg social-buttonz btn-dark shadow" href="https://github.com/TheDinoKingK" target="_blank">
-                <i class="bi-github social" style="font-size: 2rem;"></i>
-            </a>
-            <a class="btn btn-lg social-buttonz btn-secondary shadow" id="toastTrigger" onclick="clipboardText('thedinoking', 'discord handle')">
-                <i class="bi-discord social" style="font-size: 2rem;"></i> 
-            </a>
-            <a class="btn btn-lg social-buttonz btn-warning shadow" id="toastTrigger" onclick="clipboardText('thedinokingk@gmail.com', 'email address')">
-                <i class="bi-envelope-fill social" style="font-size: 2rem;"></i>
-            </a>
-        </p>
+    <div class="container-sm v-center-higher">
+        <div class="flex-grow-1">    
+            <p class="lead">
+                <h1 class="social-header mb-0">The Social Hub</h1>
+                <h5 class="social-subheader my-0">follow me wherever i go!</h5>
+                <h6 class="social-subheader mt-0 mb-5">(hover/hold for more details)</h6>
+
+                <div class="align-items-center justify-content-center mx-2">
+                    <a class="btn btn-lg social-buttonz btn-youtube shadow my-1 px-0" href="https://youtube.com/@TheDinoKingOfficial" target="_blank">
+                        {{!-- <i class="bi-youtube social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/bi-youtube.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+
+                    {{!-- <a class="btn btn-lg social-buttonz social-buttonz-twitter btn-twitter shadow px-0" href="https://twitter.com/TheDinoKingK" target="_blank">
+                        <img src="images/svgless_icons/bi-twitter.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                    <div class="social-right-info-box text-start ps-2">
+                        <div class="social-info-header-body bg-twitter rounded-top py-1 px-2">
+                            <h1 class="social-info-header mb-0">Twitter</h1>
+                            <h3  class="social-info-subheader mt-0">@TheDinoKingK</h3>
+                        </div>
+                        <p class="social-info-body bg-dark rounded-bottom text-break pt-1 pb-3 px-2">
+                            Keep up with what I've been doing recently<br>
+                            <span class="social-info-body-smol">
+                            I also post most of my art projects here
+                            </span>
+                        </p>
+                    </div> --}}
+                    <div class="d-flex align-items-top my-1">
+                        <a class="btn btn-lg social-buttonz social-buttonz-twitter shadow px-0" href="https://twitter.com/TheDinoKingK" target="_blank">
+                            <img src="images/svgless_icons/bi-twitter.png" width="40" height="40" class="social-icon">
+                            <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                        </a>
+                        <div class="social-right-info-box text-start ps-2">
+                            <div class="social-info-header-body bg-twitter rounded-top"> {{!--  py-1 px-2 --}}
+                                <h1 class="social-info-header mb-0">Twitter</h1>
+                                <h3  class="social-info-subheader mt-0">@TheDinoKingK</h3>
+                            </div>
+                            <p class="social-info-body bg-dark rounded-bottom"> {{!--  pt-1 pb-3 px-2 --}}
+                                Keep up with what I've been doing recently<br>
+                                <span class="social-info-body-smol">
+                                I also post most of my art projects here
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <br>
+                    <a class="btn btn-lg social-buttonz btn-youtube shadow my-1 px-0" href="https://youtube.com/@TheSecondDinoKing" target="_blank">
+                        {{!-- <i class="bi-youtube social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/bi-youtube.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                    <a class="btn btn-lg social-buttonz btn-youtube shadow my-1 px-0" href="https://youtube.com/@DinoKingFX" target="_blank">
+                        {{!-- <i class="bi-youtube social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/bi-youtube.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                    <br>
+                    <a class="btn btn-lg social-buttonz btn-github shadow my-1 px-0" href="https://github.com/TheDinoKingK" target="_blank">
+                        {{!-- <i class="bi-github social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/bi-github.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                    <a class="btn btn-lg social-buttonz btn-ko-fi shadow my-1 px-0" data-bs-toggle="modal" data-bs-target="#kofiModal">
+                        {{!-- href="/donate" --}}
+                        {{!-- <i class="cib-ko-fi social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/cib-ko-fi.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                </div>
+                <br>
+                <h2 class="social-header mb-0 mt-3">Contacts</h2>
+                <h5 class="social-subheader mt-0 mb-4">talk to me personally!</h5>
+                <div class="align-items-center justify-content-center mx-2">
+                    <a class="btn btn-lg social-buttonz btn-discord shadow my-1 px-0" id="toastTrigger" onclick="clipboardText('thedinoking', 'discord handle')">
+                        {{!-- <i class="bi-discord social" style="font-size: 2rem;"></i>  --}}
+                        <img src="images/svgless_icons/bi-discord.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                    <a class="btn btn-lg social-buttonz btn-primary shadow my-1 px-0" id="toastTrigger" onclick="clipboardText('thedinokingk@gmail.com', 'email address')">
+                        {{!-- <i class="bi-envelope-at-fill social" style="font-size: 2rem;"></i> --}}
+                        <img src="images/svgless_icons/bi-envelope-at-fill.png" width="40" height="40" class="social-icon">
+                        <img src="images/genericpfp.png" width="45" height="45" class="social-pfp">
+                    </a>
+                </div>
+            </p>
+        </div>
     </div>
 
     {{!-- Kofi Modal --}}

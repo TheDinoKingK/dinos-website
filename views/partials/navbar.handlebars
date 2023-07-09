@@ -1,34 +1,44 @@
-<nav class="navbar navbar-anim bg-dark rounded-1 shadow my-1">
+<nav class="navbar navbar-anim rounded-1 my-0 py-0">
     <div class="container-fluid">
-        <a class="navbar-brand navbrand" href="/">
-        <img src="/images/navicon.png" title="Home" alt="Navbaricon" width="40" height="40"/>
+        <a class="navbar-brand navbrand m-0 p-0" href="/">
+            <img src="/images/navicon.png" title="Home" alt="Navbaricon" width="30" height="30"/>
         </a>
 
         <!-- Navbar page links -->
-        <div class="d-flex">
+        <div class="d-flex align-items-center">
             {{#if onAbout}}
                 <div class="nav-item px-2">
-                    
+                    <a class="nav-link link-about {{#if onAbout}}disabled{{/if}}" href="/about">
+                        <i class="bi-person-lines-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
+                        <p class="nav-link-text">About</p>
+                    </a>                    
                 </div>
             {{/if}}
-            <div class="nav-item px-2 {{#if onAbout}}nav-link-disabled{{/if}}">
-                <a class="nav-link link-about user-select-none {{#if onAbout}}disabled{{/if}}" href="/about">
-                    <i class="bi-person-lines-fill d-block mx-auto mb-1" style="font-size: 1.7rem;"></i>
-                    About
+            <div class="nav-item px-2 pt-4 {{#if onAbout}}nav-link-disabled{{/if}}">
+                <a class="nav-link link-about {{#if onAbout}}disabled{{/if}}" href="/about">
+                    <i class="bi-person-lines-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
+                    <p class="nav-link-text">About</p>
                 </a>
             </div>
             
-            <div class="nav-item px-2 {{#if onSocial}}nav-link-disabled{{/if}}">
-                <a class="nav-link link-social user-select-none {{#if onSocial}}disabled{{/if}}" href="/social_media">
-                    <i class="bi-person-fill-add d-block mx-auto mb-1" style="font-size: 1.7rem;"></i>
-                    Follow
+            <div class="nav-item px-2 pt-4 {{#if onSocial}}nav-link-disabled{{/if}}">
+                <a class="nav-link link-social {{#if onSocial}}disabled{{/if}}" href="/social_media">
+                    <i class="bi-person-fill-add d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
+                    <p class="nav-link-text">Follow</p>
+                </a>
+            </div>
+
+            <div class="nav-item px-2 pt-4 {{#if onWork}}nav-link-disabled{{/if}}">
+                <a class="nav-link link-work {{#if onWork}}disabled{{/if}}" href="/works">
+                    <i class="bi-person-vcard-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
+                    <p class="nav-link-text">Work</p>
                 </a>
             </div>
             
-            <div class="nav-item px-2 {{#if onEquip}}nav-link-disabled{{/if}}">
-                <a class="nav-link link-equip user-select-none {{#if onEquip}}disabled{{/if}}" href="/equipment">
-                    <i class="bi-pc-display-horizontal d-block mx-auto my-1" style="font-size: 1.5rem;"></i>
-                    Equipment
+            <div class="nav-item px-2 pt-4 {{#if onEquip}}nav-link-disabled{{/if}}">
+                <a class="nav-link link-equipment {{#if onEquip}}disabled{{/if}}" href="/equipment">
+                    <i class="bi-pc-display-horizontal d-block mx-auto mb-0" style="font-size: 1.2rem;"></i>
+                    <p class="nav-link-text">Equipment</p>
                 </a>
             </div>
         </div>

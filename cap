@@ -50,14 +50,14 @@ Date:   Mon Jun 26 21:29:59 2023 -0400
            <!-- Header -->[m
  [m
            <div>[m
-[31m-            <h1 class="home header display-1 user-select-none">'ello!</h1>[m
-[32m+[m[32m            <h1 class="home header display-1 user-select-none">sorry</h1>[m
+[31m-            <h1 class="home header display-1">'ello!</h1>[m
+[32m+[m[32m            <h1 class="home header display-1">sorry</h1>[m
            </div>[m
  [m
            <!-- Sub Header -->[m
      [m
            <div> [m
-             <p class="display-6 text-center user-select-none">[m
+             <p class="display-6 text-center">[m
 [31m-              <span class="home subheader">Hru</span>[m
 [31m-              <span class="home subheader">Genie</span>[m
 [31m-              <span class="home subheader">Yeeto</span>[m
@@ -71,7 +71,7 @@ Date:   Mon Jun 26 21:29:59 2023 -0400
 [31m-          <div class="p-auto">[m
 [32m+[m[32m          <!-- <div class="p-auto">[m
              <p class="lead">[m
-               <span class="buttonz flex-column user-select-none px-1">[m
+               <span class="buttonz flex-column px-1">[m
                  <a href="about" class="btn btn-lg btn-crimson shadow home-buttonz hb1">[m
 [36m@@ -87,7 +84,7 @@[m
                  </a>[m

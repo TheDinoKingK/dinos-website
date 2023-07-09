@@ -13,4 +13,4 @@ function clipboardText(myString, whatYouCopy) {
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastAlert)
     toastBootstrap.show()
     toastBody.innerHTML = "Copied " + whatYouCopy + " to clipboard"
-}
+}   
