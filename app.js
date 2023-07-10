@@ -6,7 +6,10 @@ const app = express()
 const onAbout = false;
 const onSocial = false;
 const onEquip = false;
+<<<<<<< HEAD
 const onWork = false;
+=======
+>>>>>>> main
 
 app.engine('handlebars', hbs.engine({ defaultLayout: "main" }))
 app.set('view engine', 'handlebars')
@@ -54,6 +57,7 @@ app.use(
 )
   
 // routes
+<<<<<<< HEAD
 
 app.get('/', (req, res) => {
   res.render('main/index', {title: 'The dino king'})
@@ -79,6 +83,29 @@ app.get('/equipment', (req, res) => {
 
 app.get('/dial', (req, res) => {
   res.render('extras/dial', {title: 'Dial Up'})
+=======
+
+app.get('/', (req, res) => {
+  res.render('main/index', {title: 'The dino king'})
+})
+
+app.get('/about', (req, res) => {
+  res.render('main/about', {title: 'About me', onAbout: true})
+})
+
+app.get('/social_media', (req, res) => {
+  res.render('main/socials', {title: 'Social hub', onSocial: true})
+})
+
+app.get('/equipment', (req, res) => {
+  res.render('main/equipment', {title: 'My equipment', onEquip: true})
+})
+
+// silly easter egg routes
+
+app.get('/dial', (req, res) => {
+  res.render('main/dial', {title: 'Dial Up'})
+>>>>>>> main
 })
 
 // app.listen(process.env.PORT)

@@ -122,6 +122,7 @@
   .v-center {
     min-height: 95%;
     min-height: 95vh;
+<<<<<<< HEAD
 
     display: flex;
     align-items: center;
@@ -130,11 +131,14 @@
   .v-center-higher {
     min-height: 85%;
     min-height: 85vh;
+=======
+>>>>>>> main
 
     display: flex;
     align-items: center;
   }
 
+<<<<<<< HEAD
   .v-center-highest {
     min-height: 70%;
     min-height: 70vh;
@@ -283,6 +287,21 @@
   .home-buttonz {
     /* transform: translateY(20px);
     opacity: 0; */
+=======
+  .social-buttonz {
+    max-width: 5rem;
+    max-height: 5rem;
+    text-shadow: 0 .15rem .1rem rgba(0, 0, 0, .75);
+  }
+
+  .social {
+    color: white;
+  }
+
+  .home-buttonz {
+    transform: translateY(20px);
+    opacity: 0;
+>>>>>>> main
     transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
   }
 
@@ -291,13 +310,21 @@
     transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
   }
 
+<<<<<<< HEAD
   .home-button-1:active {
+=======
+  .hb1:active {
+>>>>>>> main
     transform: scale(70%);
     filter: saturate(135%) brightness(75%);
     transition: all 0.8s cubic-bezier(0.5,0.01,0,0.97);
   } */
 
+<<<<<<< HEAD
   .home-button-1 {
+=======
+  .hb1 {
+>>>>>>> main
     display: inline-flex;
     align-items: center;
     justify-content: center;
