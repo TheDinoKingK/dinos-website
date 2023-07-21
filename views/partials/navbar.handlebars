@@ -1,46 +1,83 @@
-<nav class="navbar navbar-anim rounded-1 my-0 py-0">
+<nav class="navbar fixed-top navbar-anim rounded-1 my-0 py-0">
     <div class="container-fluid">
-        <a class="navbar-brand navbrand m-0 p-0" href="/">
-            <img src="/images/navicon.png" title="Home" alt="Navbaricon" width="30" height="30"/>
+        <a class="navbar-brand navbrand" href="/">
+            {{!-- <img src="/images/navicon.png" title="Home" alt="Navbaricon" width="30" height="30"/> --}}
+                <img src="/images/TDK Text Logo Stacked.png" height="30"/>
         </a>
 
         <!-- Navbar page links -->
-        <div class="d-flex align-items-center">
+        <div class="d-inline-flex align-items-center">
             {{#if onAbout}}
-                <div class="nav-item px-2">
-                    <a class="nav-link link-about {{#if onAbout}}disabled{{/if}}" href="/about">
-                        <i class="bi-person-lines-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
-                        <p class="nav-link-text">About</p>
-                    </a>                    
-                </div>
+            <div class="nav-item volume-nav-item px-2">
+                <a class="nav-link" href="#">
+                    <i class="bi-volume-up-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
+                </a>                    
+            </div>
             {{/if}}
-            <div class="nav-item px-2 pt-4 {{#if onAbout}}nav-link-disabled{{/if}}">
+            <div class="nav-item px-2 pt-4 {{#if onAbout}}nav-link-disabled{{/if}} pc-nav-item">
                 <a class="nav-link link-about {{#if onAbout}}disabled{{/if}}" href="/about">
                     <i class="bi-person-lines-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
                     <p class="nav-link-text">About</p>
                 </a>
             </div>
             
-            <div class="nav-item px-2 pt-4 {{#if onSocial}}nav-link-disabled{{/if}}">
+            <div class="nav-item px-2 pt-4 {{#if onSocial}}nav-link-disabled{{/if}} pc-nav-item">
                 <a class="nav-link link-social {{#if onSocial}}disabled{{/if}}" href="/social_media">
                     <i class="bi-person-fill-add d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
                     <p class="nav-link-text">Follow</p>
                 </a>
             </div>
 
-            <div class="nav-item px-2 pt-4 {{#if onWork}}nav-link-disabled{{/if}}">
+            <div class="nav-item px-2 pt-4 {{#if onWork}}nav-link-disabled{{/if}} pc-nav-item">
                 <a class="nav-link link-work {{#if onWork}}disabled{{/if}}" href="/works">
                     <i class="bi-person-vcard-fill d-block mx-auto mb-0" style="font-size: 1.4rem;"></i>
                     <p class="nav-link-text">Work</p>
                 </a>
             </div>
             
-            <div class="nav-item px-2 pt-4 {{#if onEquip}}nav-link-disabled{{/if}}">
+            <div class="nav-item px-2 pt-4 {{#if onEquip}}nav-link-disabled{{/if}} pc-nav-item">
                 <a class="nav-link link-equipment {{#if onEquip}}disabled{{/if}}" href="/equipment">
                     <i class="bi-pc-display-horizontal d-block mx-auto mb-0" style="font-size: 1.2rem;"></i>
                     <p class="nav-link-text">Equipment</p>
+                </a>
+            </div>  
+            
+
+            <div class="nav-item ps-2 pt-4">
+                <a class="nav-link nav-mobile-menu" id="navMobileMenu" onclick="toggleMobileMenu()">
+                    <i class="bi-list d-block mx-auto mb-0 mobile-menu-burger" id="mobileMenuBurger" style="font-size: 2rem;"></i>
+                    <i class="bi-x d-block mx-auto mb-0 mobile-menu-x" id="mobileMenuX" style="font-size: 2.2rem;"></i>
                 </a>
             </div>
         </div>
     </div>
 </nav>
+
+<div class="mobile-menu" id="mobileMenuDropdown">
+    <div class="nav-item px-2 pt-4 {{#if onAbout}}nav-link-disabled{{/if}}">
+        <a class="nav-link link-about {{#if onAbout}}disabled{{/if}}" href="/about">
+            <p class="nav-link-text">About Me</p>
+        </a>
+    </div>
+
+    <div class="nav-item px-2 pt-4 {{#if onSocial}}nav-link-disabled{{/if}}">
+        <a class="nav-link link-social {{#if onSocial}}disabled{{/if}}" href="/social_media">
+            <p class="nav-link-text">Follow Me</p>
+        </a>
+    </div>
+
+    <div class="nav-item px-2 pt-4 {{#if onWork}}nav-link-disabled{{/if}}">
+        <a class="nav-link link-work {{#if onWork}}disabled{{/if}}" href="/works">
+            <p class="nav-link-text">My Work</p>
+        </a>
+    </div>
+
+    <div class="nav-item px-2 pt-4 {{#if onEquip}}nav-link-disabled{{/if}}">
+        <a class="nav-link link-equipment {{#if onEquip}}disabled{{/if}}" href="/equipment">
+            <p class="nav-link-text">My Equipment</p>
+        </a>
+    </div>
+</div>
+
+
+<script src="/js/navbar.js"></script>

@@ -6,10 +6,7 @@ const app = express()
 const onAbout = false;
 const onSocial = false;
 const onEquip = false;
-<<<<<<< HEAD
 const onWork = false;
-=======
->>>>>>> main
 
 app.engine('handlebars', hbs.engine({ defaultLayout: "main" }))
 app.set('view engine', 'handlebars')
@@ -22,6 +19,8 @@ const { title } = require("process");
 app.use(favicon(__dirname + '/favicon.ico'))
 app.use('/images', express.static('assets/images'))
 app.use('/images', express.static('assets/images/work_images'))
+app.use('/videos', express.static('assets/videos'))
+app.use('/audio', express.static('assets/audio'))
 app.use('/helsinki.woff', express.static('assets/fonts/helsinki_regular_macroman/helsinki-webfont.woff'))
 app.use('/mikado', express.static('assets/fonts/mikado'))
 
@@ -57,10 +56,9 @@ app.use(
 )
   
 // routes
-<<<<<<< HEAD
 
 app.get('/', (req, res) => {
-  res.render('main/index', {title: 'The dino king'})
+  res.render('main/index', {title: 'The Dino King'})
 })
 
 app.get('/social_media', (req, res) => {
@@ -83,29 +81,6 @@ app.get('/equipment', (req, res) => {
 
 app.get('/dial', (req, res) => {
   res.render('extras/dial', {title: 'Dial Up'})
-=======
-
-app.get('/', (req, res) => {
-  res.render('main/index', {title: 'The dino king'})
-})
-
-app.get('/about', (req, res) => {
-  res.render('main/about', {title: 'About me', onAbout: true})
-})
-
-app.get('/social_media', (req, res) => {
-  res.render('main/socials', {title: 'Social hub', onSocial: true})
-})
-
-app.get('/equipment', (req, res) => {
-  res.render('main/equipment', {title: 'My equipment', onEquip: true})
-})
-
-// silly easter egg routes
-
-app.get('/dial', (req, res) => {
-  res.render('main/dial', {title: 'Dial Up'})
->>>>>>> main
 })
 
 // app.listen(process.env.PORT)

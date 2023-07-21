@@ -11,5 +11,5 @@ anime.timeline()
     filter: blur[13, 0],
     easing: "cubicBezier(0.65,0.06,0.37,0.93)",
     duration: 800,
-    delay: anime.stagger(100)
+    delay: anime.stagger(100, {start: 500})
   });
